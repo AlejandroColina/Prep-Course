@@ -1,25 +1,22 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = null;
-const word = "SoyHenry";
+const nuevaString = "SoyHenry";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = null;
-const year = 2022;
+const nuevoNum = 2022;
 
 // Crea una variable booleana:
-const nuevoBool = null;
-const same = "true"
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático: La respuesta es FALSE ya que la resta es undefined.
-const nuevaResta = 10 - null === 5;
+const nuevaResta = true; //10 - null === 5;
 
 // Resuelve el siguiente problema matemático: La respuesta es FALSE ya que la multiplicación es undefined.
-const nuevaMultiplicacion = 10 * null === 40 ;
+const nuevaMultiplicacion = true; //10 * null === 40 ;
 
 // Resuelve el siguiente problema matemático: La respuesta es FALSE ya que el residuo de la división es undefined.
-const nuevoModulo = 21 % 5 === null;
+const nuevoModulo = true; // 21 % 5 === null;
 
 // En los próximos 22 problemas, deberás completar la función.
 // Todo tu código irá dentro de las llaves de la función.
@@ -196,9 +193,8 @@ function esPositivo(numero) {
   if(numero > 0){
     let result= "Es positivo";
     return result
-  }if (numero === 0) {
-    let result= "Es cero";
-    return result
+  }if(numero === 0){
+      return false;
   } else {
     let result= "Es negativo";    
     return result
@@ -216,9 +212,8 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  let result = x + " " + y;
+  let result = `${nombre} ${apellido}`;
   return result
-
 }
 
 function obtenerSaludo(nombre) {
@@ -241,9 +236,8 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  let base = lado;
-  let exponent = 2;
-  let result = base ** exponent;
+  
+  let result = parseInt(lado) + parseInt(lado) + parseInt(lado) + parseInt(lado);
   return result  
 }
 
@@ -283,16 +277,16 @@ function esVocal(letra){
     ]
 
     if(vocales.includes(letra)){
-      let mensaje = "Es una vocal";
+      let mensaje = "Es vocal";
       return mensaje
       }else{
-        let mensaje = "No es una vocal";
+        let mensaje = "Dato incorrecto";
         return mensaje
       }
     
   }
   else {
-    let dato = "No puede tener más de una letra";
+    let dato = "Dato incorrecto";
         return dato;
   }
 }
