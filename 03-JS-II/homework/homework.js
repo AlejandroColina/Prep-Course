@@ -187,6 +187,7 @@ function operadoresLogicos(num1, num2, num3) {
       else {
       return "Hay negativos"
       }    
+  return false
 }
 
 function esPrimo(numero) {
@@ -221,7 +222,7 @@ function tablaDelSeis(){
   //Escribe tu código aquí   
   var tabla = [];
 
-  for(let i=1; i<61; i++){
+  for(let i=0; i<11; i++){
     
     let a = parseInt(6) * i;
     tabla.push(a)
