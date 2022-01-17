@@ -58,10 +58,8 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let primerFiltro = palabras.toString()
-  let segundoFiltro = primerFiltro.replaceAll("," , " ");
-
-  return segundoFiltro
+  let phrase = palabras.join(" ");
+  return phrase
 }
 
 
@@ -115,16 +113,29 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  `arguments`
+  if(arguments.length === 1){
+    return arguments[0]
+    } else if(arguments.length>1){
+        let x =1;
+        for(let i=0; i< arguments.length; i++){
+            x = x * arguments [i]
+            }
+    return x
+    }else{return 0}
+  
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  if (arreglo.length > 18) {
-    return arreglo.length
+  const array = []
+    for(let i=0; i<arreglo.length; i++){
+        if(arreglo[i] > 18){
+            array.push(arreglo[i])
+        }
     }
+return array.length
 }
 
 
@@ -194,13 +205,27 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  const peticion =[];
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] == "Enero" || array[i] == "Marzo" || array[i] == "Noviembre"){
+        peticion.push(array[i])
+    }
+  }
+    if(peticion.includes("Enero") && peticion.includes("Marzo") && peticion.includes("Noviembre")){
+    return peticion} else return "No se encontraron los meses pedidos"
 }
-
-
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let newArray =[];
+  for(let i=0; i<array.length; i++){
+    if(array[i] > 100){
+    newArray.push(array[i])
+  }
+
+  }
+return newArray
 }
 
 
@@ -212,6 +237,19 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = []
+  var b = 0;
+
+  while (b < 10){
+    b += 1;
+    numero += 2;
+    if(b ===numero) {
+      return "Se interrumpió la ejecución"
+      break
+    }
+    array.push(numero)
+  }
+return array
 }
 
 
@@ -222,6 +260,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var array = []
+  var b = 0;
+
+  while (b < 10){
+    b += 1;
+
+    if(b ===5) continue
+    numero += 2;
+    
+    array.push(numero)
+  }
+return array
 }
 
 
