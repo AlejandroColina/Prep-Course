@@ -12,17 +12,19 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-    setTimeout(()=>{
+    /*setTimeout(()=>{
     [cb]
     }, 3000)
 
-return new Date
+return new Date*/
+return cb
 }
 
 function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+  return cb(n1,n2)
 }
 
 function sumarArray(numeros, cb) {
@@ -31,13 +33,14 @@ function sumarArray(numeros, cb) {
   // No es necesario devolver nada
   //Tu código:
   let result = numeros.reduce((acc, e)=> acc + e)
-  arguments[1] = result
+  cb(result)
 }
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  array.forEach(e => cb(e) )
 }
 
 function map(array, cb) {
@@ -45,12 +48,23 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  let newArray =array.map(e => cb(e))
+  
+
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  let newArray =[]
+  /*for(let i=0; i<array.length; i++){
+    if(array[i].charAt(0) === "a"){
+      newArray.push(array[i])
+    }
+  }*/
+  newArray = array.filter(e => e.charAt(0)==="a")
+  return newArray
 }
 
 // No modificar nada debajo de esta línea
