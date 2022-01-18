@@ -9,7 +9,9 @@ function crearGato(nombre, edad) {
   let cat = {
     nombre : nombre,
     edad : edad,
-    meow : () => {return "Meow!"}
+    meow : function () {
+      return "Meow!"
+    }
   }
   return cat
 }
@@ -30,7 +32,7 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  return objeto[metodo]
+objeto[metodo]()
   
 }
 
@@ -126,9 +128,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-  let usuario = []
-  usuario.push(usuarios)
-  return usuario
+  for(const item in usuarios) {
+    usuarios[item].esPremium = true
+  }
+return usuarios  
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -138,6 +141,11 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var bandera=0;
+  for (let i = 0; i < usuario.posts.length; i++) {
+    bandera = bandera + usuario.posts[i].likes   
+  }
+  return bandera
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -151,7 +159,13 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  
+  producto.calcularPrecioDescuento = function () {
+    var descuento = this.precio * this.porcentajeDeDescuento;
+    
+      return this.precio - descuento
+  }
+return producto
 }
 
 // No modificar nada debajo de esta línea
