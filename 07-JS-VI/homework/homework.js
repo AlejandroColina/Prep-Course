@@ -4,11 +4,19 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
+  this.nombre = nombre;
+  this.nombre2 = this.nombre.toLowerCase()
+  return this.nombre2.charAt(0).toUpperCase() + this.nombre2.slice(1)
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
+    setTimeout(()=>{
+    [cb]
+    }, 3000)
+
+return new Date
 }
 
 function operacionMatematica(n1, n2, cb) {
