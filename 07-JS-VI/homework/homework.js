@@ -12,12 +12,8 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-    /*setTimeout(()=>{
-    [cb]
-    }, 3000)
-
-return new Date*/
-return cb
+    let saludo = "Hola";
+    cb(saludo)
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -48,9 +44,8 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  let newArray =array.map(e => cb(e))
-  
-
+ let nuevoArray = array.map( e => cb(e))
+  return nuevoArray
 }
 
 function filter(array) {
