@@ -22,6 +22,8 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+  let result = numeros.reduce((acc, e)=> acc + e)
+  arguments[1] = result
 }
 
 function forEach(array, cb) {
