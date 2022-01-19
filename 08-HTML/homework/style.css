@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+h1{
+    color: brown;
+}
+
+body{
+    background: #d6d6d638;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.divClass{
+    text-align: center;
+    margin: 20px auto;
+}
+
+#thirdDiv{
+    height: 600px;
+    width: 500px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 50px;
+    background: black;
+    margin: 20px auto;
+    box-shadow: 0 0 10px  black;
+}
+
+    #thirdDiv img{
+        width: 400px;
+        
+    }
+
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+    text-align: center;
+}
+
+span, a, h1,h3,h4{
+    margin: 8px;
+}
+
+
+
