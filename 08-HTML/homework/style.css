@@ -19,6 +19,9 @@ body{
 .divClass{
     text-align: center;
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 #thirdDiv{
@@ -34,7 +37,8 @@ body{
 
     #thirdDiv img{
         width: 400px;
-        
+        height:250px;
+        border-radius: 5px;
     }
 
 #spanId{
@@ -43,8 +47,12 @@ body{
     text-align: center;
 }
 
-span, a, h1,h3,h4{
+a, h1,h3,h4{
     margin: 8px;
+}
+
+ul{
+    list-style: none;
 }
 
 

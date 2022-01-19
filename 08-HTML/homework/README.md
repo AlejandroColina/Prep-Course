@@ -15,7 +15,7 @@ I. Cree una página HTML básica.
       * un elemento h3 que contiene "Henry".
       * un elemento h4 que contiene "tarea de HTML / CSS".
     2. En el segundo div crea:
-      * un elemento span que contiene texto que describe su comida favorita.
+      * un elemento que contiene texto que describe su comida favorita.
       * un elemento 'a' que se vincula a su restaurante favorito.
     3. En el tercer div crea:
       * una lista desordenada con dos elementos dentro de la lista
