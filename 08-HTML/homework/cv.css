@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+    margin: 5% auto; 
+    width: 70%;
+    height: 800px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px black;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*----------------ASIDE----------------------------*/
+#aside{
+    display: grid;
+    grid-template-rows: 30% 70%;
+    color: white;
+}
+
+    #aside .aside_img{
+        background:rgb(53 134 154);
+        border-radius: 0 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 8% 0;        
+    }
+
+        .aside_img .img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url(https://vader.news/__export/1605107372118/sites/gadgets/img/2020/11/11/amenandiel.jpg_871393415.jpg) no-repeat center top;
+            background-size: cover;
+        }
+
+        .aside_img_div{
+            text-align: center;
+        }
+
+            .aside_img_div h1{
+                margin: 8px;
+            }
+/*-----------------------------------------------------*/            
+
+    #aside .aside_feedback{
+        background: rgb(66 168 192);
+        border-radius: 0 0 5px 0;
+        padding: 8% 9%;
+        display: flex;
+        flex-direction: column;
+    }
+        
+        .aside_feedback label{
+            margin: 8px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .aside_feedback a{
+            text-decoration: none;
+            color: white;
+        }
+
+            .aside_feedback a:hover{
+                text-decoration-line: underline;
+            }
+
+        .aside_feedback label img{
+            margin-right:4px; 
+            width: 15px;
+            height: 15px;
+        }    
+/*-------------------MAIN---------------------------------*/
+main{
+    padding: 8%;
+    height: 100%;
+    width: ;
+}
+
+#main h2{
+    margin-bottom: 4%;
+    color: rgb(53 134 154)  ;
+}
+
+#main p{
+    margin-bottom: 3%;
+    color: rgb(88, 88, 88);
+    text-align: justify;
+}
