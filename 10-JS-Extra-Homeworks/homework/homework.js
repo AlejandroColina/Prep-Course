@@ -37,6 +37,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let rra=[];
+  for(let i=str.length-1; i>=0; i--){
+    rra.push(str[i])
+  }
+  return rra.join("")
 } 
 
 
