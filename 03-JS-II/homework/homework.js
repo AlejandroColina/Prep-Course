@@ -141,10 +141,10 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
   if (numero === parseInt(numero)) {
-      return true
-  } else {
-    return false
-  }
+    return true
+} else {
+  return false
+}
 }
 
 function fizzBuzz(numero) {

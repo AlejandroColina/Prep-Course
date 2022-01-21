@@ -1,15 +1,17 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;    
+    margin: 0;  
+    color: white;  
 }
 
 h1{
-    color: brown;
+    color: white;
 }
 
 body{
-    background: #d6d6d638;
+    background: url(https://images.pexels.com/photos/65777/pexels-photo-65777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,9 +32,9 @@ body{
     border: 1px solid white;
     border-radius: 10px;
     padding: 50px;
-    background: black;
+    background: rgba(0, 0, 0, 0.445);
     margin: 20px auto;
-    box-shadow: 0 0 10px  black;
+    box-shadow: 0 0 10px white;
 }
 
     #thirdDiv img{
